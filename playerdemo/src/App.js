@@ -1,12 +1,11 @@
 import React from 'react'
-import RecorderPage from './Pages/RecorderPage'
-import './App.css';
-
+import PlayerPage from './Pages/PlayerPage'
+import "./App.css"
 
 const App = () => {
   return (
     <div className='App'>
-      <RecorderPage/>
+      <PlayerPage/>
     </div>
   )
 }
