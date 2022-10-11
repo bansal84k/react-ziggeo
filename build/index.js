@@ -1375,13 +1375,12 @@ module.exports = exporter;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
 var _ziggeoRecorderAttrib;
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
- // ####################### Player/Recorder Attributes #############################
+
+// ####################### Player/Recorder Attributes #############################
 // When using HTML embed methods, all parameters should be prefixed with ziggeo-
 // https://ziggeo.com/docs/sdks/javascript/browser-integration/parameters#javascript-revision=v1-r29&javascript-version=v2
-
 var ziggeoRecorderAttributesPropTypes = (_ziggeoRecorderAttrib = {
   // Presentational parameters
   'width': __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_prop_types__["oneOfType"])([__WEBPACK_IMPORTED_MODULE_0_prop_types__["number"], __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"]]),
@@ -1582,7 +1581,9 @@ var ziggeoPlayerAttributesPropTypes = {
   'vast': __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_prop_types__["arrayOf"])(__WEBPACK_IMPORTED_MODULE_0_prop_types__["object"]),
   // Form and HTML parameters
   'input-bind': __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"],
-  'form-accept': __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"] // // handle special cases
+  'form-accept': __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"]
+
+  // // handle special cases
   // handleVideo: function(props, propName, componentName) {
   //     if( (props['video'] === undefined || props['video'].length < 1) &&
   //         (props['video-profile'] === undefined || props['video-profile'].length < 1)
@@ -1593,8 +1594,8 @@ var ziggeoPlayerAttributesPropTypes = {
   //         )
   //     }
   // },
-
 };
+
 var ziggeoAudioRecorderAttributesPropTypes = {
   // Presentational parameters
   'width': __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_prop_types__["oneOfType"])([__WEBPACK_IMPORTED_MODULE_0_prop_types__["number"], __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"]]),
@@ -1741,12 +1742,14 @@ var ziggeoAudioPlayerAttributesPropTypes = {
   // Form and HTML parameters
   'input-bind': __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"],
   'form-accept': __WEBPACK_IMPORTED_MODULE_0_prop_types__["string"]
-}; // #######################  DEFAULTS  ##################################
+};
+
+// #######################  DEFAULTS  ##################################
+
 // #######################  EMBEDDING EVENTS #############################
 // Javascript Embed Recorder Events
 // https://ziggeo.com/docs/sdks/javascript/browser-interaction/application-embedding-events#javascript-revision=v1-r29
 // application.embed_event.on..
-
 var ziggeoRecorderEmbeddingEventsPropTypes = {
   onPlaying: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onPaused: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
@@ -1793,10 +1796,11 @@ var ziggeoCommonEmbeddingEventsPropTypes = {
   onRecording: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onLoaded: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onError: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"]
-}; // #######################  ZIGGEO METHODS  ##############################
+};
+
+// #######################  ZIGGEO METHODS  ##############################
 // Methods
 // https://ziggeo.com/docs/sdks/javascript/browser-interaction/methods#javascript-revision=v1-r29&javascript-version=v2
-
 var ziggeoMethods = {
   play: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   record: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
@@ -1818,11 +1822,12 @@ var ziggeoMethods = {
   destroy: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   trim: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   audioError: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
-  imageError: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"]
-}; // #######################    ##############################
+  videoError: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"]
+};
+
+// #######################    ##############################
 // Common Events
 // https://ziggeo.com/docs/sdks/javascript/browser-interaction/events#javascript-revision=v1-r29&javascript-version=v2
-
 var ziggeoApiEventsPropTypes = {
   onEventPlay: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onEventPause: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
@@ -1848,14 +1853,16 @@ var ziggeoApiEventsPropTypes = {
   onEventAccessGranted: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onEventAccessRevoked: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onEventRecorderProcessed: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"]
-}; // #######################  React Common Options  ##############################
+};
 
+// #######################  React Common Options  ##############################
 var reactCustomOptions = {
   preventReRenderOnUpdate: __WEBPACK_IMPORTED_MODULE_0_prop_types__["bool"],
   updateInstance: __WEBPACK_IMPORTED_MODULE_0_prop_types__["any"]
-}; // ####################### Application Events #############################
-// application.embed_event.on..
+};
 
+// ####################### Application Events #############################
+// application.embed_event.on..
 var ziggeoApplicationEvents = {
   onError: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"],
   onReady: __WEBPACK_IMPORTED_MODULE_0_prop_types__["func"]
@@ -2152,71 +2159,54 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_50__;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 var _excluded = ["apiKey", "flashUrl", "locale", "mediaLocales"];
-
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
 
 
 
 var withZiggeoApplication = function withZiggeoApplication(WrappedComponent) {
   return function (_ref) {
     var apiKey = _ref.apiKey,
-        flashUrl = _ref.flashUrl,
-        locale = _ref.locale,
-        mediaLocales = _ref.mediaLocales,
-        restProps = _objectWithoutProperties(_ref, _excluded);
-
+      flashUrl = _ref.flashUrl,
+      locale = _ref.locale,
+      mediaLocales = _ref.mediaLocales,
+      restProps = _objectWithoutProperties(_ref, _excluded);
     var _useState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-        _useState2 = _slicedToArray(_useState, 2),
-        app = _useState2[0],
-        setApp = _useState2[1];
-
+      _useState2 = _slicedToArray(_useState, 2),
+      app = _useState2[0],
+      setApp = _useState2[1];
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
       try {
         if (!app) initApplication();
       } catch (e) {
         console.error(e);
       }
-
-      return function () {// NOTE: DON'T DESTROY APPLICATION ITSELF
+      return function () {
+        // NOTE: DON'T DESTROY APPLICATION ITSELF
         // Will receive error 'Cannot read property 'urls' of undefined'
         // if (app) app.destroy();
       };
     }, [app]);
-
     var initApplication = function initApplication() {
       // Set locale
       if (typeof locale !== "undefined") ZiggeoApi.V2.Locale.setLocale(locale);
-
       if (mediaLocales) {
         if (Array.isArray(mediaLocales)) mediaLocales.map(function (config) {
           var register = config.register,
-              languages = config.languages,
-              priority = config.priority;
-
+            languages = config.languages,
+            priority = config.priority;
           if (register) {
             if (Array.isArray(languages)) {
               var language_args = [];
               languages.map(function (l, i) {
                 language_args.push("language:".concat(l));
-
                 if (i === languages.length - 1) {
                   return ZiggeoApi.V2.Locale.mediaLocale.register(register, language_args, priority || 10);
                 }
@@ -2226,13 +2216,12 @@ var withZiggeoApplication = function withZiggeoApplication(WrappedComponent) {
             }
           }
         });else console.warn('mediaLocales has to be an Array, please read documentation for more details.');
-      } // Set external flash player
+      }
 
-
+      // Set external flash player
       if (typeof flashUrl !== "undefined") ZiggeoApi.V2.Config.set("flash", flashUrl);
       setApp(ZiggeoApi.V2.Application.instanceByToken(apiKey, applicationOptions()));
     };
-
     var applicationOptions = function applicationOptions() {
       return Object.keys(restProps).filter(function (k) {
         return __WEBPACK_IMPORTED_MODULE_1__constants__["e" /* ziggeoRecorderApplicationOptions */][k];
@@ -2241,13 +2230,11 @@ var withZiggeoApplication = function withZiggeoApplication(WrappedComponent) {
         return attr;
       }, {});
     };
-
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(WrappedComponent, _extends({}, restProps, {
       app: app
     }));
   };
 };
-
 withZiggeoApplication.prototype = {
   apiKey: __WEBPACK_IMPORTED_MODULE_2_prop_types__["string"].isRequired
 };
@@ -4830,56 +4817,37 @@ __webpack_require__(329);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__withZiggeoApplication__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(44);
 var _excluded = ["app"];
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
 
 
 
 var ZiggeoAudioPlayer = function ZiggeoAudioPlayer(_ref) {
   var app = _ref.app,
-      props = _objectWithoutProperties(_ref, _excluded);
-
+    props = _objectWithoutProperties(_ref, _excluded);
   var updateInstance = props.updateInstance;
-
   var _useState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      player = _useState2[0],
-      setPlayer = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    player = _useState2[0],
+    setPlayer = _useState2[1];
   var _useState3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      attributes = _useState4[0],
-      setAttributes = _useState4[1];
-
+    _useState4 = _slicedToArray(_useState3, 2),
+    attributes = _useState4[0],
+    setAttributes = _useState4[1];
   var _useState5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      elementProps = _useState6[0],
-      setElementProps = _useState6[1];
-
+    _useState6 = _slicedToArray(_useState5, 2),
+    elementProps = _useState6[0],
+    setElementProps = _useState6[1];
   var playerElement = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(null);
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
     if (attributes && player && updateInstance) {
@@ -4891,7 +4859,6 @@ var ZiggeoAudioPlayer = function ZiggeoAudioPlayer(_ref) {
       setAttributes(ziggeoAttributes());
       setElementProps(ziggeoElementProps());
     }
-
     if (playerElement && attributes) {
       setPlayer(new ZiggeoApi.V2.AudioPlayer({
         element: playerElement.current,
@@ -4904,14 +4871,12 @@ var ZiggeoAudioPlayer = function ZiggeoAudioPlayer(_ref) {
       player.activate();
       Object.entries(ziggeoEvents).forEach(function (_ref2) {
         var _ref3 = _slicedToArray(_ref2, 2),
-            event = _ref3[0],
-            func = _ref3[1];
-
+          event = _ref3[0],
+          func = _ref3[1];
         player.on(event, func.bind(ZiggeoAudioPlayer, player.get()));
       });
       props.onRef(player);
     }
-
     return function () {
       if (player) {
         props.onRef(null);
@@ -4919,11 +4884,11 @@ var ZiggeoAudioPlayer = function ZiggeoAudioPlayer(_ref) {
       }
     };
   }, [player]);
+
   /**
    * Set all props defined by user
    * @returns {{}}
    */
-
   var ziggeoAttributes = function ziggeoAttributes() {
     return Object.keys(props).filter(function (k) {
       return __WEBPACK_IMPORTED_MODULE_2__constants__["h" /* ziggeoAudioPlayerAttributesPropTypes */][k];
@@ -4932,12 +4897,11 @@ var ZiggeoAudioPlayer = function ZiggeoAudioPlayer(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Include props which are not related to Ziggeo
    * @returns {{}}
    */
-
-
   var ziggeoElementProps = function ziggeoElementProps() {
     return Object.keys(props).filter(function (k) {
       return !ZiggeoAudioPlayer.propTypes[k];
@@ -4946,32 +4910,28 @@ var ZiggeoAudioPlayer = function ZiggeoAudioPlayer(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Add Related Events
    * @type {{}}
    */
-
-
   var ziggeoEvents = Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_2__constants__["i" /* ziggeoPlayerEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_2__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (memo, propName) {
     var eventName = propName.replace(/([A-Z])/g, '_$1').toLowerCase().slice(3).replace(/(recorder_|player_)/g, '');
-
     memo[eventName] = function () {
       props[propName].apply(props, arguments);
     };
-
     return memo;
-  }, {}); // Delegate ziggeo attrs to the player
+  }, {});
 
+  // Delegate ziggeo attrs to the player
   var playerInstance = function playerInstance() {
     return player;
   };
-
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", _extends({
     ref: playerElement,
     app: app
   }, elementProps));
 };
-
 ZiggeoAudioPlayer.propTypes = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, __WEBPACK_IMPORTED_MODULE_2__constants__["h" /* ziggeoAudioPlayerAttributesPropTypes */]), __WEBPACK_IMPORTED_MODULE_2__constants__["i" /* ziggeoPlayerEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_2__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* ziggeoPlayerApplicationOptions */]), __WEBPACK_IMPORTED_MODULE_2__constants__["f" /* reactCustomOptions */]);
 ZiggeoAudioPlayer.defaultProps = _objectSpread({
   // Presentational parameters
@@ -4983,11 +4943,11 @@ ZiggeoAudioPlayer.defaultProps = _objectSpread({
   // in milliseconds
   'skipseconds': 5,
   // in seconds
+
   // only react related options
   'preventReRenderOnUpdate': true
 }, Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_2__constants__["i" /* ziggeoPlayerEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_2__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (defaults, event) {
   defaults[event] = function () {};
-
   return defaults;
 }, {}));
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__withZiggeoApplication__["a" /* default */])(ZiggeoAudioPlayer));
@@ -5002,57 +4962,38 @@ ZiggeoAudioPlayer.defaultProps = _objectSpread({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__withZiggeoApplication__ = __webpack_require__(51);
 var _excluded = ["app"];
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 /* globals ZiggeoApi */
-
 
 
 
 var ZiggeoAudioRecorder = function ZiggeoAudioRecorder(_ref) {
   var app = _ref.app,
-      props = _objectWithoutProperties(_ref, _excluded);
-
+    props = _objectWithoutProperties(_ref, _excluded);
   var updateInstance = props.updateInstance;
-
   var _useState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      recorder = _useState2[0],
-      setRecorder = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    recorder = _useState2[0],
+    setRecorder = _useState2[1];
   var _useState3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      attributes = _useState4[0],
-      setAttributes = _useState4[1];
-
+    _useState4 = _slicedToArray(_useState3, 2),
+    attributes = _useState4[0],
+    setAttributes = _useState4[1];
   var _useState5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      elementProps = _useState6[0],
-      setElementProps = _useState6[1];
-
+    _useState6 = _slicedToArray(_useState5, 2),
+    elementProps = _useState6[0],
+    setElementProps = _useState6[1];
   var recorderElement = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(null);
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
     if (attributes && recorder && updateInstance) {
@@ -5064,7 +5005,6 @@ var ZiggeoAudioRecorder = function ZiggeoAudioRecorder(_ref) {
       setAttributes(ziggeoAttributes());
       setElementProps(ziggeoElementProps());
     }
-
     if (recorderElement && attributes) {
       setRecorder(new ZiggeoApi.V2.AudioRecorder({
         element: recorderElement.current,
@@ -5077,14 +5017,12 @@ var ZiggeoAudioRecorder = function ZiggeoAudioRecorder(_ref) {
       recorder.activate();
       Object.entries(ziggeoEvents).forEach(function (_ref2) {
         var _ref3 = _slicedToArray(_ref2, 2),
-            event = _ref3[0],
-            func = _ref3[1];
-
+          event = _ref3[0],
+          func = _ref3[1];
         recorder.on(event, func.bind(ZiggeoAudioRecorder, recorder.get()));
       });
       props.onRef(recorder);
     }
-
     return function () {
       if (recorder) {
         props.onRef(null);
@@ -5092,11 +5030,11 @@ var ZiggeoAudioRecorder = function ZiggeoAudioRecorder(_ref) {
       }
     };
   }, [recorder]);
+
   /**
    * Set all props defined by user
    * @returns {{}}
    */
-
   var ziggeoAttributes = function ziggeoAttributes() {
     return Object.keys(props).filter(function (k) {
       return Object.assign(__WEBPACK_IMPORTED_MODULE_1__constants__["a" /* ziggeoAudioRecorderAttributesPropTypes */], __WEBPACK_IMPORTED_MODULE_1__constants__["b" /* ziggeoPlayerApplicationOptions */])[k];
@@ -5105,12 +5043,11 @@ var ZiggeoAudioRecorder = function ZiggeoAudioRecorder(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Include props which are not related to Ziggeo
    * @returns {{}}
    */
-
-
   var ziggeoElementProps = function ziggeoElementProps() {
     return Object.keys(props).filter(function (k) {
       return !ZiggeoAudioRecorder.propTypes[k];
@@ -5119,36 +5056,31 @@ var ZiggeoAudioRecorder = function ZiggeoAudioRecorder(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Add Related Events
    * @type {{}}
    */
-
-
   var ziggeoEvents = Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ziggeoRecorderEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (memo, propName) {
     var eventName = propName.replace(/([A-Z])/g, '_$1').toLowerCase().slice(3).replace(/(recorder_|player_)/g, '');
-
     memo[eventName] = function () {
       props[propName].apply(props, arguments);
     };
-
     return memo;
   }, {});
+
   /**
    *
    * @returns AudioPlayer Instance
    */
-
   var recorderInstance = function recorderInstance() {
     return recorder;
   };
-
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", _extends({
     ref: recorderElement,
     app: app
   }, elementProps));
 };
-
 ZiggeoAudioRecorder.propTypes = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, __WEBPACK_IMPORTED_MODULE_1__constants__["a" /* ziggeoAudioRecorderAttributesPropTypes */]), __WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ziggeoRecorderEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_1__constants__["e" /* ziggeoRecorderApplicationOptions */]), __WEBPACK_IMPORTED_MODULE_1__constants__["f" /* reactCustomOptions */]);
 ZiggeoAudioRecorder.defaultProps = _objectSpread({
   // Presentational parameters
@@ -5181,7 +5113,6 @@ ZiggeoAudioRecorder.defaultProps = _objectSpread({
   testing_application: false
 }, Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ziggeoRecorderEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (defaults, event) {
   defaults[event] = function () {};
-
   return defaults;
 }, {}));
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__withZiggeoApplication__["a" /* default */])(ZiggeoAudioRecorder));
@@ -5196,56 +5127,37 @@ ZiggeoAudioRecorder.defaultProps = _objectSpread({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__withZiggeoApplication__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(44);
 var _excluded = ["app"];
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
 
 
 
 var ZiggeoPlayer = function ZiggeoPlayer(_ref) {
   var app = _ref.app,
-      props = _objectWithoutProperties(_ref, _excluded);
-
+    props = _objectWithoutProperties(_ref, _excluded);
   var updateInstance = props.updateInstance;
-
   var _useState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      player = _useState2[0],
-      setPlayer = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    player = _useState2[0],
+    setPlayer = _useState2[1];
   var _useState3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      attributes = _useState4[0],
-      setAttributes = _useState4[1];
-
+    _useState4 = _slicedToArray(_useState3, 2),
+    attributes = _useState4[0],
+    setAttributes = _useState4[1];
   var _useState5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      elementProps = _useState6[0],
-      setElementProps = _useState6[1];
-
+    _useState6 = _slicedToArray(_useState5, 2),
+    elementProps = _useState6[0],
+    setElementProps = _useState6[1];
   var playerElement = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(null);
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
     if (attributes && player && updateInstance) {
@@ -5257,7 +5169,6 @@ var ZiggeoPlayer = function ZiggeoPlayer(_ref) {
       setAttributes(ziggeoAttributes());
       setElementProps(ziggeoElementProps());
     }
-
     if (playerElement && attributes) {
       setPlayer(new ZiggeoApi.V2.Player({
         element: playerElement.current,
@@ -5270,14 +5181,12 @@ var ZiggeoPlayer = function ZiggeoPlayer(_ref) {
       player.activate();
       Object.entries(ziggeoEvents).forEach(function (_ref2) {
         var _ref3 = _slicedToArray(_ref2, 2),
-            event = _ref3[0],
-            func = _ref3[1];
-
+          event = _ref3[0],
+          func = _ref3[1];
         player.on(event, func.bind(ZiggeoPlayer, player.get()));
       });
       props.onRef(player);
     }
-
     return function () {
       if (player) {
         props.onRef(null);
@@ -5285,11 +5194,11 @@ var ZiggeoPlayer = function ZiggeoPlayer(_ref) {
       }
     };
   }, [player]);
+
   /**
    * Set all props defined by user
    * @returns {{}}
    */
-
   var ziggeoAttributes = function ziggeoAttributes() {
     return Object.keys(props).filter(function (k) {
       return __WEBPACK_IMPORTED_MODULE_2__constants__["j" /* ziggeoPlayerAttributesPropTypes */][k];
@@ -5298,12 +5207,11 @@ var ZiggeoPlayer = function ZiggeoPlayer(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Include props which are not related to Ziggeo
    * @returns {{}}
    */
-
-
   var ziggeoElementProps = function ziggeoElementProps() {
     return Object.keys(props).filter(function (k) {
       return !ZiggeoPlayer.propTypes[k];
@@ -5312,32 +5220,28 @@ var ZiggeoPlayer = function ZiggeoPlayer(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Add Related Events
    * @type {{}}
    */
-
-
   var ziggeoEvents = Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_2__constants__["i" /* ziggeoPlayerEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_2__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (memo, propName) {
     var eventName = propName.replace(/([A-Z])/g, '_$1').toLowerCase().slice(3).replace(/(recorder_|player_)/g, '');
-
     memo[eventName] = function () {
       props[propName].apply(props, arguments);
     };
-
     return memo;
-  }, {}); // Delegate ziggeo attrs to the player
+  }, {});
 
+  // Delegate ziggeo attrs to the player
   var playerInstance = function playerInstance() {
     return player;
   };
-
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", _extends({
     ref: playerElement,
     app: app
   }, elementProps));
 };
-
 ZiggeoPlayer.propTypes = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, __WEBPACK_IMPORTED_MODULE_2__constants__["j" /* ziggeoPlayerAttributesPropTypes */]), __WEBPACK_IMPORTED_MODULE_2__constants__["i" /* ziggeoPlayerEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_2__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* ziggeoPlayerApplicationOptions */]), __WEBPACK_IMPORTED_MODULE_2__constants__["f" /* reactCustomOptions */]);
 ZiggeoPlayer.defaultProps = _objectSpread({
   // Presentational parameters
@@ -5356,7 +5260,6 @@ ZiggeoPlayer.defaultProps = _objectSpread({
   'preventReRenderOnUpdate': true
 }, Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_2__constants__["i" /* ziggeoPlayerEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_2__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (defaults, event) {
   defaults[event] = function () {};
-
   return defaults;
 }, {}));
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__withZiggeoApplication__["a" /* default */])(ZiggeoPlayer));
@@ -5371,57 +5274,38 @@ ZiggeoPlayer.defaultProps = _objectSpread({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__withZiggeoApplication__ = __webpack_require__(51);
 var _excluded = ["app"];
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 /* globals ZiggeoApi */
-
 
 
 
 var ZiggeoRecorder = function ZiggeoRecorder(_ref) {
   var app = _ref.app,
-      props = _objectWithoutProperties(_ref, _excluded);
-
+    props = _objectWithoutProperties(_ref, _excluded);
   var updateInstance = props.updateInstance;
-
   var _useState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      recorder = _useState2[0],
-      setRecorder = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    recorder = _useState2[0],
+    setRecorder = _useState2[1];
   var _useState3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      attributes = _useState4[0],
-      setAttributes = _useState4[1];
-
+    _useState4 = _slicedToArray(_useState3, 2),
+    attributes = _useState4[0],
+    setAttributes = _useState4[1];
   var _useState5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      elementProps = _useState6[0],
-      setElementProps = _useState6[1];
-
+    _useState6 = _slicedToArray(_useState5, 2),
+    elementProps = _useState6[0],
+    setElementProps = _useState6[1];
   var recorderElement = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(null);
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
     if (attributes && recorder && updateInstance) {
@@ -5433,7 +5317,6 @@ var ZiggeoRecorder = function ZiggeoRecorder(_ref) {
       setAttributes(ziggeoAttributes());
       setElementProps(ziggeoElementProps());
     }
-
     if (recorderElement && attributes) {
       setRecorder(new ZiggeoApi.V2.Recorder({
         element: recorderElement.current,
@@ -5446,14 +5329,12 @@ var ZiggeoRecorder = function ZiggeoRecorder(_ref) {
       recorder.activate();
       Object.entries(ziggeoEvents).forEach(function (_ref2) {
         var _ref3 = _slicedToArray(_ref2, 2),
-            event = _ref3[0],
-            func = _ref3[1];
-
+          event = _ref3[0],
+          func = _ref3[1];
         recorder.on(event, func.bind(ZiggeoRecorder, recorder.get()));
       });
       props.onRef(recorder);
     }
-
     return function () {
       if (recorder) {
         props.onRef(null);
@@ -5461,11 +5342,11 @@ var ZiggeoRecorder = function ZiggeoRecorder(_ref) {
       }
     };
   }, [recorder]);
+
   /**
    * Set all props defined by user
    * @returns {{}}
    */
-
   var ziggeoAttributes = function ziggeoAttributes() {
     return Object.keys(props).filter(function (k) {
       return Object.assign(__WEBPACK_IMPORTED_MODULE_1__constants__["g" /* ziggeoRecorderAttributesPropTypes */], __WEBPACK_IMPORTED_MODULE_1__constants__["b" /* ziggeoPlayerApplicationOptions */])[k];
@@ -5474,12 +5355,11 @@ var ZiggeoRecorder = function ZiggeoRecorder(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Include props which are not related to Ziggeo
    * @returns {{}}
    */
-
-
   var ziggeoElementProps = function ziggeoElementProps() {
     return Object.keys(props).filter(function (k) {
       return !ZiggeoRecorder.propTypes[k];
@@ -5488,36 +5368,31 @@ var ZiggeoRecorder = function ZiggeoRecorder(_ref) {
       return attr;
     }, {});
   };
+
   /**
    * Add Related Events
    * @type {{}}
    */
-
-
   var ziggeoEvents = Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ziggeoRecorderEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (memo, propName) {
     var eventName = propName.replace(/([A-Z])/g, '_$1').toLowerCase().slice(3).replace(/(recorder_|player_)/g, '');
-
     memo[eventName] = function () {
       props[propName].apply(props, arguments);
     };
-
     return memo;
   }, {});
+
   /**
    *
    * @returns Player Instance
    */
-
   var recorderInstance = function recorderInstance() {
     return recorder;
   };
-
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", _extends({
     ref: recorderElement,
     app: app
   }, elementProps));
 };
-
 ZiggeoRecorder.propTypes = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, __WEBPACK_IMPORTED_MODULE_1__constants__["g" /* ziggeoRecorderAttributesPropTypes */]), __WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ziggeoRecorderEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */]), __WEBPACK_IMPORTED_MODULE_1__constants__["e" /* ziggeoRecorderApplicationOptions */]), __WEBPACK_IMPORTED_MODULE_1__constants__["f" /* reactCustomOptions */]);
 ZiggeoRecorder.defaultProps = _objectSpread({
   // Presentational parameters
@@ -5576,15 +5451,17 @@ ZiggeoRecorder.defaultProps = _objectSpread({
   opera_extension_install_link: "https://addons.opera.com/en/extensions/details/3d46d4c36fefe97e76622c54b2eb6ea1d5406767"
 }, Object.keys(Object.assign(__WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ziggeoRecorderEmbeddingEventsPropTypes */], __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* ziggeoCommonEmbeddingEventsPropTypes */])).reduce(function (defaults, event) {
   defaults[event] = function () {};
-
   return defaults;
 }, {}));
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__withZiggeoApplication__["a" /* default */])(ZiggeoRecorder)); // const doesUpdateRequire = (prevProps, nextProps) => {
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__withZiggeoApplication__["a" /* default */])(ZiggeoRecorder));
+
+// const doesUpdateRequire = (prevProps, nextProps) => {
 //   // const oldApiKey = prevProps['apiKey'];
 //   // const { apiKey } = nextProps;
 //   const { preventReRenderOnUpdate } = nextProps || true;
 //   return !preventReRenderOnUpdate;
 // };
+
 // export default withZiggeoApplication(React.memo(ZiggeoRecorder, doesUpdateRequire));
 
 /***/ }),
