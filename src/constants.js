@@ -505,7 +505,9 @@ export const ziggeoMethods = {
     destroy: func,
     trim: func,
     audioError: func,
-    videoError: func  
+    videoError: func,
+    select_camera:func,
+    select_microphone:func,
 };
 
 

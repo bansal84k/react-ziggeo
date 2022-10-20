@@ -39,10 +39,11 @@
   "homepage": "https://ziggeo.com",
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.0",
+    "react-ziggeo": "^4.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

@@ -127,6 +127,8 @@ export default class RecorderPage extends Component {
                     onVerified={this.recorderVerified}
                     onNoCamera={this.recorderNoCamera}
                     onNoMicrophone={this.recorderNoMicrophone}
+                    
+                    
                 />
 
                 <div className="text-left">
