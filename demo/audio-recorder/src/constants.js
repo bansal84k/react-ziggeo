@@ -3,8 +3,8 @@ export const API_KEY = '';
 export const VIDEO_TOKEN = '';
 
 // APP 2 - Default
-export const API_KEY_2 = '098969e7b13a251ad640117a2add376d';
-export const VIDEO_TOKEN_2 = 'fd7603100ca28626e7a5c85817146297';
+export const API_KEY_2 = '';
+export const VIDEO_TOKEN_2 = '';
 export const VIDEO_TOKEN_2_1 = '';
 export const VIDEO_TOKEN_AUDIO = ''
 

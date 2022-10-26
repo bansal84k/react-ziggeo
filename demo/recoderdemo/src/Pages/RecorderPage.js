@@ -100,6 +100,7 @@ export default class RecorderPage extends Component {
                     <strong>Note: </strong>
                     It's demonstrative view, recording and uploading set to not allowed, you can register <a href="https://ziggeo.com">Ziggeo</a>. After getting key, use all awesome features
                 </p>
+                
                 <ZiggeoRecorder
                     apiKey={API_KEY}
                     video={VIDEO_TOKEN}
@@ -119,7 +120,7 @@ export default class RecorderPage extends Component {
                     onUploading={this.recorderUploading}
                     onRerecord={this.recorderRerecord}
                     onCountdown={this.recorderCountdown}
-                    onRecordingProgress={this.recorderRecordingProgress}
+                    onRecordingProgres={this.recorderRecordingProgress}
                     onUploadProgress={this.recorderUploadProgress}
                     onAccessForbidden={this.recorderAccessForbidden}
                     onAccessGranted={this.recorderAccessGranted}

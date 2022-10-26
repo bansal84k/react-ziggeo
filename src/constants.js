@@ -507,7 +507,7 @@ export const ziggeoMethods = {
     audioError: func,
     videoError: func,
     select_camera:func,
-    select_microphone:func,
+    select_microphone:func
 };
 
 
