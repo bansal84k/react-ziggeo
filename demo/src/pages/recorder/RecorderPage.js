@@ -1,23 +1,17 @@
 import React, { Component } from "react";
-import {
-  ZiggeoRecorder,
-  ZiggeoAudioPlayer,
-  ZiggeoAudioRecorder,
-} from "react-ziggeo";
-import { API_KEY, VIDEO_TOKEN, VIDEO_TOKEN_AUDIO } from "../../constants";
+import { ZiggeoRecorder } from "react-ziggeo";
+import { API_KEY, VIDEO_TOKEN } from "../../constants";
 
 export default class RecorderPage extends Component {
   playing = () => {
     console.log("it's playing, your action here");
   };
-  outsourceSelectors = ({ outsourceSelectors }) => {
-    return (
-      <div>
-        <h1>{outsourceSelectors.select_camera}</h1>
-        <h1>{outsourceSelectors.select_mic}</h1>
-      </div>
-    );
-  };
+  // outsourceSelectors = () => {
+  //   const
+  //   debugger;
+  //   console.log("hhhhhh")
+  //   document.getElementById("mic-my-own-id-selector");
+  // };
 
   paused = () => {
     console.log("it's paused, your action when pause");
@@ -104,12 +98,15 @@ export default class RecorderPage extends Component {
   };
 
   render() {
+    const SELECTOR =
+      "mic-my-own-id-selector[type='radio',className='asdas asdasd form']";
+
     return (
       <section className="recorder-page">
         <select id="cam-my-own-id-selector">
           <option>Please Select Camera</option>
         </select>
-        <select id="mic-my-own-id-selector">
+        <select id="mic-my-own-id-selector" type="radio">
           <option>Audio/input</option>
         </select>
 
@@ -126,7 +123,6 @@ export default class RecorderPage extends Component {
           video={VIDEO_TOKEN}
           height={180}
           width={320}
-          allowscreen={true}
           onPlaying={this.playing}
           onPaused={this.paused}
           onEnded={this.playerEnded}
@@ -149,12 +145,13 @@ export default class RecorderPage extends Component {
           onVerified={this.recorderVerified}
           onNoCamera={this.recorderNoCamera}
           onNoMicrophone={this.recorderNoMicrophone}
-          // outsource-selectors={
+          // outsource-selectors={[
+          //   (id =
+          //     "cam-my-own-id-selector[type='select',showCapabilities=true];mic-my-own-id-selector[type='radio',className='asdas asdasd form']"),
+          // ]}
+          // outsourceSelectors={
           //   "cam-my-own-id-selector[type='select',showCapabilities=true];mic-my-own-id-selector[type='radio',className='asdas asdasd form']"
           // }
-          outsourceSelectors={
-            "cam-my-own-id-selector[type='select',showCapabilities=true];mic-my-own-id-selector[type='radio',className='asdas asdasd form']"
-          }
         />
 
         <div className="text-left">

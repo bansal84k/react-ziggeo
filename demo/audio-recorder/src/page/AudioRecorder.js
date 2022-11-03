@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import {  ZiggeoAudioRecorder } from "react-ziggeo";
-import { API_KEY, VIDEO_TOKEN, VIDEO_TOKEN_AUDIO } from "../constants";
+import { Audio_Recorder_TOKEN } from "../constants";
 
 export default class AudioRecorder extends Component {
   render() {
     return (
-      <section className="recorder-page">
+      <section className="AudioRecorderPage">
         <h1 className="page-header">AudioRecorder Page</h1>
         <p className="alert alert-warning">
           <strong>Note: </strong>
@@ -15,14 +15,9 @@ export default class AudioRecorder extends Component {
         </p>
 
           <ZiggeoAudioRecorder
-          audio={VIDEO_TOKEN_AUDIO}
-          audio-test-mandatory={true}
+          audio={Audio_Recorder_TOKEN}
           width={640}
           height={480}
-          // onlyAudio={true}
-          // localplayback={true}
-          hidebarafter={5000} // in milliseconds
-          skipseconds={5} // in seconds
           preventReRenderOnUpdate={true}
         />
 

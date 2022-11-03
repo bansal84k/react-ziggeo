@@ -7,7 +7,7 @@ export default class ScreenRecorder extends Component {
 
   render() {
     return (
-      <section className="recorder-page">
+      <section className="ScreenRecorderPage">
         
         <h1 className="page-header">Screen-Recorder Page</h1>
         <p className="alert alert-warning">

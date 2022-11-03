@@ -6,7 +6,7 @@ export const VIDEO_TOKEN = '';
 export const API_KEY_2 = '';
 export const VIDEO_TOKEN_2 = '';
 export const VIDEO_TOKEN_2_1 = '';
-export const VIDEO_TOKEN_AUDIO = ''
+export const Audio_Recorder_TOKEN = ''
 
 export const videos = [
     { video: VIDEO_TOKEN_2 },
