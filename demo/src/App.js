@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from "./components/Footer";
 import MainComponent from './components/MainContent';
 import './App.css';
+import 'ziggeo-client-sdk/build/ziggeo.css';
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <MainComponent />
-        <Footer/>
+        <Footer />
       </div>
     );
   }
