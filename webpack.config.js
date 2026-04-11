@@ -1,12 +1,12 @@
 var path = require('path');
-var isProduction = process.env.NODE_ENV === 'production';
 var webpack = require('webpack');
-var ignore = new webpack.IgnorePlugin({ resourceRegExp: /(ziggeo-client-sdk)/ });
 var fs = require('fs');
 
 const pkg = JSON.parse(fs.readFileSync('./package.json').toString());
 
-module.exports = {
+module.exports = function(env, argv) {
+    var isProduction = argv && argv.mode === 'production';
+    return {
     devtool: 'source-map',
     entry: [
         './src/index.js'
@@ -19,7 +19,6 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
-        ignore,
         new webpack.BannerPlugin({
             banner: `
 /**
@@ -71,4 +70,5 @@ module.exports = {
             amd: 'react',
         }
     }
+    };
 };
