@@ -1,6 +1,10 @@
 export default (() => {
-    if((typeof window !== 'undefined' && !window._babelPolyfill) ||
-        (typeof global !== 'undefined' && !global._babelPolyfill)) {
-        require("@babel/polyfill");
+    const root = (typeof globalThis !== 'undefined') ? globalThis :
+        (typeof window !== 'undefined') ? window :
+            (typeof global !== 'undefined') ? global : null;
+    if (!root || !root.__ZIGGEO_POLYFILL_LOADED__) {
+        require("core-js/stable");
+        require("regenerator-runtime/runtime");
+        if (root) root.__ZIGGEO_POLYFILL_LOADED__ = true;
     }
 })()
